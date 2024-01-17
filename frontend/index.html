@@ -1,71 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatbot</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: lightgreen;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: lightgreen;
+      }
 
-        #chat-container {
-            width: 80%;
-            margin: auto;
-            max-width: 600px;
-            height: 100vh;
-            background-color: lightpink;
-        }
+      #chat-container {
+        width: 80%;
+        margin: auto;
+        max-width: 600px;
+        height: 100vh;
+      }
 
-        #chat-box {
-            height: 80%;
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-            padding: 10px;
-            overflow-y: scroll;
-            background-color: yellow;
-        }
+      #chat-box {
+        height: 80%;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 10px;
+        overflow-y: scroll;
+        background-color: white;
+        text-align: left;
+      }
 
-        #user-input {
-            width: 80%;
-        }
+      #user-input {
+        width: 80%;
+        max-height: 200px;
+        height: 30px;
+        overflow-y: hidden;
+      }
 
-        #send-button {
-            width: 100px;
-        }
+      #send-button {
+        width: 60px;
+        margin: auto;
+      }
+      main {
+        height: 100vh;
+        background-color: lightblue;
+      }
 
-        main {
-
-            height: 100vh;
-            background-color: lightblue
-        }
-
-        section {
-            border: solid 1px;
-            background-color: lightyellow;
-        }
+      section {
+        border: solid 1px;
+        background-color: lightyellow;
+        text-align: center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        MAIN
-        <section aria-labelledby="chat-title">
-            SECTION
-            <h1 id="chat-title">도봉이와의 대화방</h1>
-            <div id="chat-container">
-                DIV(CHAT-CONTAINER)
-                <div id="chat-box">
-                    DIV(CHAT-BOX)
-                </div>
-                <input type="text" id="user-input" placeholder="메세지를 입력하세요.">
-                <button type="submit" id="send-button">보내기</button>
-            </div>
-        </section>
+      <section aria-labelledby="chat-title">
+        <h1 id="chat-title">도봉이와의 대화방</h1>
+        <div id="chat-container">
+          <div id="chat-box">
+            <div style="text-align: center">화면</div>
+            <br />
+          </div>
+          <input
+            type="text"
+            id="user-input"
+            placeholder="메세지를 입력하세요."
+          />
+          <button type="submit" id="send-button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="text-white dark:text-black"
+            >
+              <path
+                d="M7 11L12 6L17 11M12 18V7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </section>
     </main>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
