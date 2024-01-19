@@ -11,11 +11,12 @@ body {
 
 header {
   /* 문제1: header를 HTML 문서의 흐름에서 벗어나 언제나 고정된 자리에 있도록 만들어 보세요. */
-
+  position: fixed;
   width: 100%;
   background-color: #f8f8f8;
   border-bottom: 1px solid #ddd;
   z-index: 1000;
+  top: 0;
 }
 
 h1 {
@@ -32,9 +33,10 @@ h1 {
 }
 
 #header-nav li {
-  /* 문제2: 헤더의 리스트의 아이템들이 세로로 정렬될 수 있도록 만들어 보세요. */
+  /* 문제2: 헤더의 리스트의 아이템들이 가로로 정렬될 수 있도록 만들어 보세요. */
   padding: 10px 10px;
   width: 20%;
+  display: inline-block;
 }
 
 #header-nav li a {
@@ -49,12 +51,14 @@ h1 {
 
 #side-nav {
   /* 문제3: side의 navbar가 채팅방 안에서만 고정된 위치에 있도록 만들어 보세요. */
-
   height: 300px;
   width: 200px;
-  float: left;
+
   border: 1px solid #ddd;
   padding: 10px;
+
+  position: sticky;
+  top: 15vh;
 }
 
 #side-nav ul {
@@ -64,6 +68,7 @@ h1 {
 
 #side-nav li {
   display: block;
+  text-align: center;
 }
 
 #side-nav li a {
@@ -72,6 +77,7 @@ h1 {
   padding: 10px;
   color: black;
   border-bottom: 1px solid #ddd;
+  display: inline-block;
 }
 
 #side-nav li a:hover {
@@ -89,6 +95,8 @@ main {
   max-width: 600px;
   height: calc(80vh - 60px);
   padding-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 #chat-box {
@@ -118,9 +126,11 @@ main {
 
 #gallery img {
   /* 문제5: 이미지들의 크기를 조정할 수 있으면서 가로로 정렬될 수 있도록 만들어 보세요. */
-  display: block;
+  display: inline-block;
   width: 200px;
+
   /* 문제6: 이미지들끼리 서로 10px씩 떨어질 수 있도록 만들어 보세요. */
+  margin: 10px;
 }
 
 footer {
@@ -130,8 +140,15 @@ footer {
   padding: 20px;
   margin-top: 20px;
   background-color: #f2f2f2;
+  text-align: center;
 }
 
 section {
   border: solid 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#chat-wrapper {
+  width: 80%;
 }

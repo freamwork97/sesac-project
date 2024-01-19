@@ -24,21 +24,32 @@ div.static {
 div.relative {
   /* 코드 작성 */
   background: RoyalBlue;
+  position: relative;
+  right: -260px;
+  top: -50px;
 }
 
 div.fixed {
   /* 코드 작성 */
   background: IndianRed;
+  position: fixed;
+  top: 20px;
+  left: 5px;
 }
 
 div.absolute {
   /* 코드 작성 */
   background: ForestGreen;
+  position: absolute;
+  top: 50px;
+  left: 420px;
 }
 
 div.sticky {
   /* 코드 작성 */
   background: PaleGoldenRod;
+  position: sticky;
+  top: 30px;
 }
 
 div:before {
